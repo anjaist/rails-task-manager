@@ -1,15 +1,13 @@
-<h1><%= @task.title %></h1>
+<div class="container">
+  <div class="tasks">
+    <h1><%= @task.title %></h1>
 
-<br>
+    <%= @task.details %>
 
-<%= @task.details %>
+    <%= @task.completed ? "TASK COMPLETED!" : "TASK NOT YET COMPLETED!" %>
 
-<br>
-<br>
+    <%= link_to "Edit task", edit_task_path %>
 
-<%= @task.completed ? "TASK COMPLETED!" : "TASK NOT YET COMPLETED!" %>
-
-
-<%= link_to "Edit task", edit_task_path %>
-
-<%= link_to "Back to tasks", tasks_path  %>
+    <%= link_to "Back to tasks", tasks_path  %>
+  </div>
+</div>
