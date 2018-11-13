@@ -1,0 +1,15 @@
+<h1><%= @task.title %></h1>
+
+<br>
+
+<%= @task.details %>
+
+<br>
+<br>
+
+<%= @task.completed ? "TASK COMPLETED!" : "TASK NOT YET COMPLETED!" %>
+
+
+<%= link_to "Edit task", edit_task_path %>
+
+<%= link_to "Back to tasks", tasks_path  %>
